@@ -1,0 +1,39 @@
+[user]
+	name = andrewsim
+	email = andrews@cakesolutions.net
+[mergetool]
+        keepBackup = true
+[alias]
+        b    = branch
+        co   = checkout
+        c    = commit
+        cam  = commit -am
+        l    = log --pretty=format:'%h : %an, %ar : %s' --graph
+        s    = status
+        pick = cherry-pick
+        ci   = commit
+        rb   = rebase
+[color]
+        branch = auto
+        diff = auto
+        status = auto
+        interactive = auto
+        ui = auto
+[apply]
+        whitespace = nowarn
+[core]
+	editor = /usr/local/bin/vim
+[push]
+	default = simple
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[filter "hawser"]
+	clean = git hawser clean %f
+	smudge = git hawser smudge %f
+	required = true
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
