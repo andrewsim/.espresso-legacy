@@ -27,3 +27,9 @@ Powerline fonts
 ```
 git clone git@github.com:andrewsim/.espresso.git
 ```
+
+Colour Scheme
+```
+ln -n .vim/color
+git@github.com:altercation/vim-colors-solarized.git
+```

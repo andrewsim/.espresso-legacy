@@ -19,8 +19,8 @@
   "Plugin 'scrooloose/syntastic'
   "Plugin 'Raimondi/delimitMate'
   "Plugin 'reedes/vim-pencil'
-  "Plugin 'godlygeek/tabular'
-  "Plugin 'plasticboy/vim-markdown'
+  Plugin 'godlygeek/tabular'
+  Plugin 'plasticboy/vim-markdown'
   call vundle#end()
   filetype plugin indent on
 " ========== Vundle ==========
