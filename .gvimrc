@@ -4,6 +4,8 @@
   set guioptions-=l
   set guioptions-=L
   set antialias
+
+  set relativenumber
 "========== general ==========
 
 "========== thematic ==========

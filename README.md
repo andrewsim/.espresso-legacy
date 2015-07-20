@@ -23,3 +23,7 @@ mv .zshrc .zshrc.backup
 ln -s .espresso/.zshrc .zshrc
 ```
 
+Powerline fonts
+```
+git clone git@github.com:andrewsim/.espresso.git
+```

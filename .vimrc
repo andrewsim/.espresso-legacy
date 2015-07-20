@@ -41,7 +41,7 @@
 
   " show the line number/relative number
   set number
-  set relativenumber
+  "set relativenumber
 
   " right margin column
   set colorcolumn=120
