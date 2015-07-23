@@ -90,8 +90,11 @@ eval "$(jenv init -)"
 # Maven Java Config
 export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=2048m"
 
+# spark bin
+export PATH="$HOME/Downloads/spark-1.4.1-bin-hadoop2.6/bin:$PATH"
+
 # Hadoop 2.7
-alias hstart="/usr/local/Cellar/hadoop/2.7.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.0/sbin/start-yarn.sh"
-alias hstop="/usr/local/Cellar/hadoop/2.7.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.0/sbin/stop-dfs.sh"
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib
-export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/lib"
+#alias hstart="/usr/local/Cellar/hadoop/2.7.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.0/sbin/start-yarn.sh"
+#alias hstop="/usr/local/Cellar/hadoop/2.7.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.0/sbin/stop-dfs.sh"
+#export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib
+#export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/lib"

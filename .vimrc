@@ -21,6 +21,7 @@
   "Plugin 'reedes/vim-pencil'
   Plugin 'godlygeek/tabular'
   Plugin 'plasticboy/vim-markdown'
+  Plugin 'ekalinin/Dockerfile.vim'
   call vundle#end()
   filetype plugin indent on
 " ========== Vundle ==========
