@@ -10,8 +10,8 @@
 
 "========== thematic ==========
   let g:thematic#defaults = {
-  \  'typeface':       'Droid Sans Mono for Powerline',
-  \  'font-size':      15,
+  \  'typeface':       'Hack',
+  \  'font-size':      14,
   \  'linespace':      0,
   \  'background':     'dark',
   \  'airline-theme':  'molokai'

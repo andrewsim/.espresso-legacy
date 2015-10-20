@@ -98,3 +98,4 @@ export PATH="$HOME/Downloads/spark-1.4.1-bin-hadoop2.6/bin:$PATH"
 #alias hstop="/usr/local/Cellar/hadoop/2.7.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.0/sbin/stop-dfs.sh"
 #export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib
 #export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/lib"
+export PATH="/usr/local/sbin:$PATH"

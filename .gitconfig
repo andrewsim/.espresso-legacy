@@ -22,7 +22,8 @@
 [apply]
         whitespace = nowarn
 [core]
-	editor = /usr/local/bin/vim
+	editor = /usr/bin/vim
+	excludesfile = /Users/andrews/.gitignore_global
 [push]
 	default = simple
 [filter "media"]
@@ -37,3 +38,10 @@
 	clean = git lfs clean %f
 	smudge = git lfs smudge %f
 	required = true
+[cola]
+	fontdiff = Hack,11,-1,5,50,0,0,0,0,0
+	tabwidth = 4
+	textwidth = 120
+	linebreak = false
+[gui]
+	editor = mvim

@@ -13,15 +13,16 @@
   Plugin 'reedes/vim-thematic'
   Plugin 'altercation/vim-colors-solarized'
   "Plugin 'vim-ruby/vim-ruby'
-  "Plugin 'derekwyatt/vim-scala'
+  Plugin 'derekwyatt/vim-scala'
   "Plugin 'tpope/vim-surround'
   "Plugin 'tpope/vim-commentary'
   "Plugin 'scrooloose/syntastic'
   "Plugin 'Raimondi/delimitMate'
-  "Plugin 'reedes/vim-pencil'
+  Plugin 'reedes/vim-pencil'
   Plugin 'godlygeek/tabular'
   Plugin 'plasticboy/vim-markdown'
   Plugin 'ekalinin/Dockerfile.vim'
+  Plugin 'ensime/ensime-vim'
   call vundle#end()
   filetype plugin indent on
 " ========== Vundle ==========
@@ -113,3 +114,12 @@
 "========== NerdTree ==========
   map <leader>n :NERDTreeToggle<CR>
 "========== NerdTree ==========
+
+"========== Pencil ============
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,md  call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+"========== Pencil ============
+
