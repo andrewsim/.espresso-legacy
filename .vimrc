@@ -1,4 +1,4 @@
-" ========== Vundle ==========
+"========== Vundle ==========
   set nocompatible
   filetype off 
   " set the runtime path to include Vundle and initialize
@@ -20,12 +20,16 @@
   "Plugin 'Raimondi/delimitMate'
   Plugin 'reedes/vim-pencil'
   Plugin 'godlygeek/tabular'
+  Plugin 'airblade/vim-gitgutter'
   Plugin 'plasticboy/vim-markdown'
   Plugin 'ekalinin/Dockerfile.vim'
   Plugin 'ensime/ensime-vim'
+  Plugin 'pangloss/vim-javascript'
+  Plugin 'othree/javascript-libraries-syntax.vim'
+  Plugin 'burnettk/vim-angular'
   call vundle#end()
   filetype plugin indent on
-" ========== Vundle ==========
+"========== Vundle ==========
 
 "========== General ==========
   " System default for mappings is now the "," character
@@ -122,4 +126,9 @@ augroup pencil
   autocmd FileType text         call pencil#init()
 augroup END
 "========== Pencil ============
+
+"======== javascript ==========
+let g:angular_filename_convention = 'camelcased'
+"======== javascript ==========
+
 

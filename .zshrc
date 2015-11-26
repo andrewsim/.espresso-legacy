@@ -99,3 +99,9 @@ export PATH="$HOME/Downloads/spark-1.4.1-bin-hadoop2.6/bin:$PATH"
 #export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib
 #export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/lib"
 export PATH="/usr/local/sbin:$PATH"
+
+# Android SDK Plugin
+export ANDROID_HOME="$HOME/Development/android-sdk-macosx"
+
+# Reverse search key binding
+bindkey "^R" history-incremental-search-backward

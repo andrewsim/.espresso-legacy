@@ -33,3 +33,6 @@ Colour Scheme
 ln -n .vim/color
 git@github.com:altercation/vim-colors-solarized.git
 ```
+
+Haskell
+http://www.stephendiehl.com/posts/vim_haskell.html
