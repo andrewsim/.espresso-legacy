@@ -7,7 +7,7 @@
   Plugin 'gmarik/Vundle.vim'
   Plugin 'tpope/vim-sensible'
   "Plugin 'mileszs/ack.vim'
-  "Plugin 'kien/ctrlp.vim' 
+  Plugin 'kien/ctrlp.vim' 
   Plugin 'scrooloose/nerdtree'
   Plugin 'bling/vim-airline'
   Plugin 'reedes/vim-thematic'
@@ -17,7 +17,7 @@
   "Plugin 'tpope/vim-surround'
   "Plugin 'tpope/vim-commentary'
   "Plugin 'scrooloose/syntastic'
-  "Plugin 'Raimondi/delimitMate'
+  Plugin 'Raimondi/delimitMate'
   Plugin 'reedes/vim-pencil'
   Plugin 'godlygeek/tabular'
   Plugin 'airblade/vim-gitgutter'
@@ -66,6 +66,25 @@
   endfunc
   nnoremap <leader>l :call NumberToggle()<cr>
 "========== General ==========
+
+"========== netrw ============
+let g:netrw_liststyle=3
+" map <leader>n :Explore<CR>
+"========== netrw ============
+
+"========= syntastic =========
+"scriptencoding utf-8
+"set statusline+=%#warningmsg#
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
+"
+"let g:syntastic_error_symbol = '✘'
+"let g:syntastic_warning_symbol = "▲"
+"let g:syntastic_always_populate_loc_list = 1
+"let g:syntastic_auto_loc_list = 1
+"let g:syntastic_check_on_open = 1
+"let g:syntastic_check_on_wq = 0
+"========= syntastic =========
 
 "========== airline ==========
   let g:airline#extensions#tabline#enabled = 1
@@ -116,7 +135,7 @@
 "========== thematic ==========
 
 "========== NerdTree ==========
-  map <leader>n :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 "========== NerdTree ==========
 
 "========== Pencil ============
