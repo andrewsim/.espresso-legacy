@@ -101,7 +101,11 @@ export PATH="$HOME/Downloads/spark-1.4.1-bin-hadoop2.6/bin:$PATH"
 export PATH="/usr/local/sbin:$PATH"
 
 # Android SDK Plugin
-export ANDROID_HOME="$HOME/Development/android-sdk-macosx"
+# export ANDROID_HOME="$HOME/Development/android-sdk-macosx"
+export ANDROID_HOME=/usr/local/opt/android-sdk
 
 # Reverse search key binding
 bindkey "^R" history-incremental-search-backward
+
+export NVM_DIR="/Users/andrews/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm

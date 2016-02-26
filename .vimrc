@@ -5,28 +5,43 @@
   set rtp+=~/.vim/bundle/Vundle.vim
   call vundle#begin()
   Plugin 'gmarik/Vundle.vim'
+  
+  " == Normal Vim Usage ==
   Plugin 'tpope/vim-sensible'
-  "Plugin 'mileszs/ack.vim'
-  Plugin 'kien/ctrlp.vim' 
   Plugin 'scrooloose/nerdtree'
+  Plugin 'kien/ctrlp.vim' 
+  Plugin 'christoomey/vim-tmux-navigator'
   Plugin 'bling/vim-airline'
   Plugin 'reedes/vim-thematic'
+  " == Normal Vim Usage ==
+  
+  " == Colour Scheme ==
   Plugin 'altercation/vim-colors-solarized'
-  "Plugin 'vim-ruby/vim-ruby'
+  " == Colour Scheme ==
+  
+  " == Syntax Highlight ==
+  Plugin 'plasticboy/vim-markdown'
   Plugin 'derekwyatt/vim-scala'
+  "Plugin 'vim-ruby/vim-ruby'
+  Plugin 'ekalinin/Dockerfile.vim'
+  Plugin 'pangloss/vim-javascript'
+  "Plugin 'othree/javascript-libraries-syntax.vim'
+  "Plugin 'burnettk/vim-angular'
+  " == Syntax Highlight ==
+  
+  " == Coding ==
+  Plugin 'airblade/vim-gitgutter'
+  "Plugin 'ensime/ensime-vim'
+  " == Coding ==
+
+  "Plugin 'mileszs/ack.vim'
   "Plugin 'tpope/vim-surround'
   "Plugin 'tpope/vim-commentary'
   "Plugin 'scrooloose/syntastic'
   Plugin 'Raimondi/delimitMate'
   Plugin 'reedes/vim-pencil'
   Plugin 'godlygeek/tabular'
-  Plugin 'airblade/vim-gitgutter'
-  Plugin 'plasticboy/vim-markdown'
-  Plugin 'ekalinin/Dockerfile.vim'
-  Plugin 'ensime/ensime-vim'
-  Plugin 'pangloss/vim-javascript'
-  Plugin 'othree/javascript-libraries-syntax.vim'
-  Plugin 'burnettk/vim-angular'
+
   call vundle#end()
   filetype plugin indent on
 "========== Vundle ==========
@@ -150,4 +165,7 @@ augroup END
 let g:angular_filename_convention = 'camelcased'
 "======== javascript ==========
 
+" ======= ctrlp =======
+set wildignore+=*/target/*
+" ======= ctrlp =======
 
