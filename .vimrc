@@ -10,13 +10,15 @@
   Plugin 'tpope/vim-sensible'
   Plugin 'scrooloose/nerdtree'
   Plugin 'kien/ctrlp.vim' 
-  Plugin 'christoomey/vim-tmux-navigator'
-  Plugin 'bling/vim-airline'
+  "Plugin 'christoomey/vim-tmux-navigator'
+  Plugin 'vim-airline/vim-airline'
+  Plugin 'vim-airline/vim-airline-themes'
   Plugin 'reedes/vim-thematic'
   " == Normal Vim Usage ==
   
   " == Colour Scheme ==
   Plugin 'altercation/vim-colors-solarized'
+  Plugin 'flazz/vim-colorschemes'
   " == Colour Scheme ==
   
   " == Syntax Highlight ==
@@ -39,7 +41,7 @@
   "Plugin 'tpope/vim-commentary'
   "Plugin 'scrooloose/syntastic'
   Plugin 'Raimondi/delimitMate'
-  Plugin 'reedes/vim-pencil'
+  "Plugin 'reedes/vim-pencil'
   Plugin 'godlygeek/tabular'
 
   call vundle#end()
@@ -108,16 +110,32 @@ let g:netrw_liststyle=3
 
 "========== thematic ==========
   let g:thematic#themes = {
+  \ 'codeschool' : {
+  \     'colorscheme':    'codeschool',
+  \     'background':     'dark'
+  \   },
   \ 'gruvbox' : {
   \     'colorscheme':    'gruvbox',
   \     'background':     'dark'
   \   },
-  \ 'molokai' : {
-  \     'colorscheme':    'molokai',
-  \     'background':     'dark'
-  \   },
   \ 'hemisu' : {
   \     'colorscheme':    'hemisu',
+  \     'background':     'dark'
+  \   },
+  \ 'hybrid-light' : {
+  \     'colorscheme':    'hybrid-light',
+  \     'background':     'dark'
+  \   },
+  \ 'hybrid' : {
+  \     'colorscheme':    'hybrid',
+  \     'background':     'dark'
+  \   },
+  \ 'jellybeans' : {
+  \     'colorscheme':    'jellybeans',
+  \     'background':     'dark'
+  \   },
+  \ 'molokai' : {
+  \     'colorscheme':    'molokai',
   \     'background':     'dark'
   \   },
   \ 'solarized-dark' : {
@@ -128,10 +146,6 @@ let g:netrw_liststyle=3
   \     'colorscheme':    'solarized',
   \     'background':     'light'
   \   },
-  \ 'jellybeans' : {
-  \     'colorscheme':    'jellybeans',
-  \     'background':     'dark'
-  \   },
   \ 'zenburn' : {
   \     'colorscheme':    'zenburn',
   \     'background':     'dark'
@@ -139,7 +153,7 @@ let g:netrw_liststyle=3
   \ }
   let g:thematic#defaults = {
   \  'typeface':       'Droid Sans Mono for Powerline',
-  \  'font-size':      14,
+  \  'font-size':      10,
   \  'linespace':      0,
   \  'background':     'dark',
   \  'airline-theme':  'molokai'
@@ -154,11 +168,11 @@ map <leader>n :NERDTreeToggle<CR>
 "========== NerdTree ==========
 
 "========== Pencil ============
-augroup pencil
-  autocmd!
-  autocmd FileType markdown,md  call pencil#init()
-  autocmd FileType text         call pencil#init()
-augroup END
+" augroup pencil
+"   autocmd!
+"   autocmd FileType markdown,md  call pencil#init()
+"   autocmd FileType text         call pencil#init()
+" augroup END
 "========== Pencil ============
 
 "======== javascript ==========
