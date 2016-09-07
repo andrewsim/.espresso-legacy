@@ -34,6 +34,7 @@
   " == Coding ==
   Plugin 'airblade/vim-gitgutter'
   "Plugin 'ensime/ensime-vim'
+  Plugin 'tpope/vim-fugitive'
   " == Coding ==
 
   "Plugin 'mileszs/ack.vim'
@@ -41,7 +42,7 @@
   "Plugin 'tpope/vim-commentary'
   "Plugin 'scrooloose/syntastic'
   Plugin 'Raimondi/delimitMate'
-  "Plugin 'reedes/vim-pencil'
+  Plugin 'reedes/vim-pencil'
   Plugin 'godlygeek/tabular'
 
   call vundle#end()
@@ -158,7 +159,7 @@ let g:netrw_liststyle=3
   \  'background':     'dark',
   \  'airline-theme':  'molokai'
   \ }
-  let g:thematic#theme_name = 'pencil'
+  let g:thematic#theme_name = 'obsidian2'
   let g:solarized_contrast = 'high'
   nnoremap <leader>t :ThematicNext<CR>
 "========== thematic ==========
@@ -168,11 +169,13 @@ map <leader>n :NERDTreeToggle<CR>
 "========== NerdTree ==========
 
 "========== Pencil ============
-" augroup pencil
-"   autocmd!
-"   autocmd FileType markdown,md  call pencil#init()
-"   autocmd FileType text         call pencil#init()
-" augroup END
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,md  call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+let g:pencil#wrapModeDefault = 'soft'
+let g:vim_markdown_folding_disabled = 1
 "========== Pencil ============
 
 "======== javascript ==========

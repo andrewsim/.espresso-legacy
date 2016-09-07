@@ -13,7 +13,7 @@
 "========== thematic ==========
   let g:thematic#defaults = {
   \  'typeface':       'Hack',
-  \  'font-size':      9,
+  \  'font-size':      12,
   \  'linespace':      0,
   \  'background':     'dark',
   \  'airline-theme':  'molokai'

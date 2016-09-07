@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=~/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -46,11 +46,11 @@ CASE_SENSITIVE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-extras git-hubflow vi-mode docker)
+plugins=(git vi-mode docker httpie pass)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -87,25 +87,14 @@ bindkey -v
 export PATH="$HOME/.jenv/bin:$PATH"
 eval "$(jenv init -)"
 
-# Maven Java Config
-export MAVEN_OPTS="-Xmx512m -XX:MaxPermSize=2048m"
-
-# spark bin
-export PATH="$HOME/Downloads/spark-1.4.1-bin-hadoop2.6/bin:$PATH"
-
-# Hadoop 2.7
-#alias hstart="/usr/local/Cellar/hadoop/2.7.0/sbin/start-dfs.sh;/usr/local/Cellar/hadoop/2.7.0/sbin/start-yarn.sh"
-#alias hstop="/usr/local/Cellar/hadoop/2.7.0/sbin/stop-yarn.sh;/usr/local/Cellar/hadoop/2.7.0/sbin/stop-dfs.sh"
-#export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib
-#export HADOOP_OPTS="$HADOOP_OPTS -Djava.library.path=$HADOOP_HOME/lib"
-export PATH="/usr/local/sbin:$PATH"
-
 # Android SDK Plugin
 # export ANDROID_HOME="$HOME/Development/android-sdk-macosx"
-export ANDROID_HOME=/usr/local/opt/android-sdk
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+export PATH="$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools:$PATH"
 
 # Reverse search key binding
 bindkey "^R" history-incremental-search-backward
 
 export NVM_DIR="/Users/andrews/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
