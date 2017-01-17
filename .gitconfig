@@ -1,8 +1,7 @@
 [user]
     name  = Andrew CS Sim
     email = andrews@cakesolutions.net
-[mergetool]
-    keepBackup = true
+    signingkey = 92ED4F153874DB1D
 [alias]
     b    = branch
     co   = checkout
@@ -17,6 +16,19 @@
     uncommit = reset --soft HEAD~
 [diff]
 	  tool = vimdiff
+    guitool = gvimdiff
+[difftool]
+    prompt = false
+[difftool "gvimdiff"]
+    path = /usr/local/bin/mvimdiff
+[merge]
+    tool = vimdiff
+    guitool = mvimdiff
+[mergetool]
+    prompt = false
+    keepBackup = true
+[mergetool "mvimdiff"]
+    cmd = /usr/local/bin/mvimdiff -f "$LOCAL" "$MERGED" "$REMOTE"
 [color]
     branch      = auto
     diff        = auto
@@ -28,6 +40,7 @@
 [core]
 	  editor        = /usr/bin/vim
 	  excludesfile  = ~/.gitignore_global
+    commentchar   = "%"
 [push]
 	  default = simple
 [filter "media"]
