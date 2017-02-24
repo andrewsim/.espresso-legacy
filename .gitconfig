@@ -1,6 +1,6 @@
 [user]
-    name  = Andrew CS Sim
-    email = andrews@cakesolutions.net
+	name = Andrew CS Sim
+	email = andrews@cakesolutions.net
     signingkey = 92ED4F153874DB1D
 [alias]
     b    = branch
@@ -59,6 +59,8 @@
 	  fontdiff  = Hack,11,-1,5,50,0,0,0,0,0
 	  tabwidth  = 4
 	  textwidth = 120
-	  linebreak = false
+	linebreak = false
+	boldheaders = true
+	spellcheck = false
 [gui]
 	  editor = mvim

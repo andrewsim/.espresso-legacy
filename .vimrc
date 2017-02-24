@@ -4,7 +4,7 @@
   " set the runtime path to include Vundle and initialize
   set rtp+=~/.vim/bundle/Vundle.vim
   call vundle#begin()
-  Plugin 'gmarik/Vundle.vim'
+  Plugin 'gmarik/Vundle.vim' 
   
   " == Normal Vim Usage ==
   Plugin 'tpope/vim-sensible'
@@ -22,7 +22,8 @@
   " == Colour Scheme ==
   
   " == Syntax Highlight ==
-  "Plugin 'plasticboy/vim-markdown'
+  Plugin 'godlygeek/tabular' "NEEDED BY vim-markdown
+  Plugin 'plasticboy/vim-markdown'
   Plugin 'derekwyatt/vim-scala'
   "Plugin 'vim-ruby/vim-ruby'
   "Plugin 'ekalinin/Dockerfile.vim'
@@ -39,13 +40,18 @@
   "Plugin 'ensime/ensime-vim'
   " == Coding ==
 
+  Plugin 'junegunn/goyo.vim'
+
   "Plugin 'mileszs/ack.vim'
   Plugin 'tpope/vim-surround'
   "Plugin 'tpope/vim-commentary'
   Plugin 'scrooloose/syntastic'
   "Plugin 'Raimondi/delimitMate'
-  "Plugin 'reedes/vim-pencil'
-  "Plugin 'godlygeek/tabular'
+  Plugin 'reedes/vim-pencil'
+
+  " == Notes ==
+  "Plugin 'xolox/vim-misc'
+  "Plugin 'xolox/vim-notes'
 
   call vundle#end()
   filetype plugin indent on
@@ -58,7 +64,7 @@
   " no word wrap by default
   set nowrap
 
-  " Tabstops are 4 spaces
+  " Tabstops are 2 spaces
   set tabstop=2
   set shiftwidth=2
   set softtabstop=2
@@ -85,6 +91,14 @@
     endif
   endfunc
   nnoremap <leader>l :call NumberToggle()<cr>
+
+  " remap escape key
+  inoremap jj <ESC>
+
+  " backup and swp
+  set backup
+  set backupdir=~/.vimbackup
+  set dir=~/.vimbackup
 "========== General ==========
 
 "========== netrw ============
@@ -160,8 +174,7 @@ let g:netrw_liststyle=3
   \  'typeface':       'Droid Sans Mono for Powerline',
   \  'font-size':      10,
   \  'linespace':      0,
-  \  'background':     'dark',
-  \  'airline-theme':  'molokai'
+  \  'background':     'dark'
   \ }
   let g:thematic#theme_name = 'obsidian2'
   let g:solarized_contrast = 'high'
@@ -173,13 +186,14 @@ map <leader>n :NERDTreeToggle<CR>
 "========== NerdTree ==========
 
 "========== Pencil ============
-"augroup pencil
-"  autocmd!
-"  autocmd FileType markdown,md  call pencil#init()
-"  autocmd FileType text         call pencil#init()
-"augroup END
-"let g:pencil#wrapModeDefault = 'soft'
-"let g:vim_markdown_folding_disabled = 1
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,md  call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+let g:pencil#wrapModeDefault = 'soft'
+let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_conceal = 0
 "========== Pencil ============
 
 "======== javascript ==========
@@ -195,8 +209,8 @@ map <leader>n :NERDTreeToggle<CR>
 " ======= ctrlp =======
 
 " ========= ENSIME =========
-  nnoremap <localleader>t :EnTypeCheck<CR>
-  au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
+" nnoremap <localleader>t :EnTypeCheck<CR>
+" au FileType scala nnoremap <localleader>df :EnDeclaration<CR>
 " ========= ENSIME =========
 
 " ========= VIM-JSX ==========
@@ -206,3 +220,4 @@ let g:jsx_ext_required = 0 " Allow JSX in normal JS files
 " ========= Syntastic ==========
 let g:syntastic_javascript_checkers = ['eslint']
 " ========= Syntastic ==========
+
