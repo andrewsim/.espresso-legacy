@@ -1,66 +1,65 @@
 [user]
-	name = Andrew CS Sim
-	email = andrews@cakesolutions.net
-    signingkey = 92ED4F153874DB1D
+  name = Andrew CS Sim
+  email = andrews@cakesolutions.net
 [alias]
-    b    = branch
-    co   = checkout
-    c    = commit
-    cam  = commit -am
-    l    = log --pretty=format:'%h : %an, %ar : %s' --graph
-    s    = status
-    pick = cherry-pick
-    ci   = commit
-    rb   = rebase
-    next = !git checkout `git rev-list HEAD..demo-end | tail -1`
-    uncommit = reset --soft HEAD~
+  b    = branch
+  co   = checkout
+  c    = commit
+  cam  = commit -am
+  l    = log --pretty=format:'%h : %an, %ar : %s' --graph
+  s    = status
+  pick = cherry-pick
+  ci   = commit
+  rb   = rebase
+  next = !git checkout `git rev-list HEAD..demo-end | tail -1`
+  uncommit = reset --soft HEAD~
 [diff]
-	  tool = vimdiff
-    guitool = gvimdiff
+  tool = vimdiff
+  guitool = gvimdiff
 [difftool]
-    prompt = false
+  prompt = false
 [difftool "gvimdiff"]
-    path = /usr/local/bin/mvimdiff
+  path = /usr/local/bin/mvimdiff
 [merge]
-    tool = vimdiff
-    guitool = mvimdiff
+  tool = vimdiff
+  guitool = mvimdiff
 [mergetool]
-    prompt = false
-    keepBackup = true
+  prompt = false
+  keepBackup = true
 [mergetool "mvimdiff"]
-    cmd = /usr/local/bin/mvimdiff -f "$LOCAL" "$MERGED" "$REMOTE"
+  cmd = /usr/local/bin/mvimdiff -f "$LOCAL" "$MERGED" "$REMOTE"
 [color]
-    branch      = auto
-    diff        = auto
-    status      = auto
-    interactive = auto
-    ui          = auto
+  branch      = auto
+  diff        = auto
+  status      = auto
+  interactive = auto
+  ui          = auto
 [apply]
-    whitespace = nowarn
+  whitespace = nowarn
 [core]
-	  editor        = /usr/bin/vim
-	  excludesfile  = ~/.gitignore_global
-    commentchar   = "%"
+  editor        = /usr/bin/vim
+  excludesfile  = ~/.gitignore_global
+  commentchar   = "%"
 [push]
-	  default = simple
+  default = simple
 [filter "media"]
-	  required  = true
-	  clean     = git media clean %f
-	  smudge    = git media smudge %f
+  required  = true
+  clean     = git media clean %f
+  smudge    = git media smudge %f
 [filter "hawser"]
-	  clean     = git hawser clean %f
-	  smudge    = git hawser smudge %f
-	  required  = true
+  clean     = git hawser clean %f
+  smudge    = git hawser smudge %f
+  required  = true
 [filter "lfs"]
-	  clean     = git lfs clean %f
-	  smudge    = git lfs smudge %f
-	  required  = true
+  clean     = git lfs clean %f
+  smudge    = git lfs smudge %f
+  required  = true
 [cola]
-	  fontdiff  = Hack,11,-1,5,50,0,0,0,0,0
-	  tabwidth  = 4
-	  textwidth = 120
-	linebreak = false
-	boldheaders = true
-	spellcheck = false
+  fontdiff  = Hack,11,-1,5,50,0,0,0,0,0
+  tabwidth  = 4
+  textwidth = 120
+  linebreak = false
+  boldheaders = true
+  spellcheck = false
 [gui]
-	  editor = mvim
+  editor = mvim
