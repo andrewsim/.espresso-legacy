@@ -25,7 +25,10 @@ if dein#load_state(s:bundle_dir)
   call dein#add('scrooloose/nerdtree')
   call dein#add('Xuyuanp/nerdtree-git-plugin')
   call dein#add('airblade/vim-gitgutter')
-  call dein#add('ensime/ensime-vim')
+  call dein#add('reedes/vim-pencil')
+  call dein#add('carlitux/deoplete-ternjs')
+  call dein#add('ternjs/tern_for_vim', {'do': 'npm install'})
+  call dein#add('dhruvasagar/vim-table-mode')
 
   call dein#end()
   call dein#save_state()
@@ -114,6 +117,19 @@ endif
   highlight clear ALEWarningSign
 " === w0rp/ale ===
 
+" === vim-jsx ===
+  let g:jsx_ext_required = 0
+" === vim-jsx ===
+
+" === deoplete-ternjs ===
+  let g:tern_request_timeout = 1
+  "let g:tern_show_signature_in_pum = '0'
+  let is_show_argument_hints_enabled = 0
+  let g:tern#command = ["ternjs"]
+  let g:tern#arguments = ["--persistent"]
+  nnoremap <Leader>td :TernDef<CR>
+" === deoplete-ternjs ===
+
 " === vim-tmux-navigator ===
   " Write all buffers before navigating from Vim to tmux pane
   let g:tmux_navigator_save_on_switch = 2
@@ -156,9 +172,10 @@ endif
   " Toggle buffer list
   nnoremap <Leader>b :CtrlPBuffer<CR><Paste>
   set wildignore+=*/tmp/*,*.so,*.swp,*.zip
-  let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+  "let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+    "\ 'dir':  '\v[\/]\.(git|hg|svn)$',
   let g:ctrlp_custom_ignore = {
-    \ 'dir':  '\v[\/]\.(git|hg|svn)$',
+    \ 'dir':  'node_modules\|DS_Store\|git',
     \ 'file': '\v\.(exe|so|dll)$',
     \ 'link': 'some_bad_symbolic_links',
     \ }
@@ -178,7 +195,15 @@ endif
 " === NERD TREE setup ===
 
 " === vim-ensime ===
-autocmd BufWritePost *.scala silent :EnTypeCheck
-nnoremap <Leader>t :EnTypeCheck<CR>
-au FileType scala nnoremap <Leader>df :EnDeclarationSplit<CR>
+" autocmd BufWritePost *.scala silent :EnTypeCheck
+" nnoremap <Leader>t :EnTypeCheck<CR>
+" au FileType scala nnoremap <Leader>df :EnDeclarationSplit<CR>
 " === vim-ensime ===
+
+" === pencil ===
+augroup pencil
+  autocmd!
+  autocmd FileType markdown,mkd call pencil#init()
+  autocmd FileType text         call pencil#init()
+augroup END
+" === pencil ===
